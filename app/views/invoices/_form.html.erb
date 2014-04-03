@@ -1,0 +1,113 @@
+<%= form_for(@invoice) do |f| %>
+  <% if @invoice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
+
+      <ul>
+      <% @invoice.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :period %><br>
+    <%= f.text_field :period %>
+  </div>
+  <div class="field">
+    <%= f.label :days %><br>
+    <%= f.text_field :days %>
+  </div>
+  <div class="field">
+    <%= f.label :suppliernumber %><br>
+    <%= f.text_field :suppliernumber %>
+  </div>
+  <div class="field">
+    <%= f.label :suppliername %><br>
+    <%= f.text_field :suppliername %>
+  </div>
+  <div class="field">
+    <%= f.label :suppliersite %><br>
+    <%= f.text_field :suppliersite %>
+  </div>
+  <div class="field">
+    <%= f.label :invoicenumber %><br>
+    <%= f.text_field :invoicenumber %>
+  </div>
+  <div class="field">
+    <%= f.label :invoiceorcreditmemoamount %><br>
+    <%= f.text_field :invoiceorcreditmemoamount %>
+  </div>
+  <div class="field">
+    <%= f.label :invoicedate %><br>
+    <%= f.text_field :invoicedate %>
+  </div>
+  <div class="field">
+    <%= f.label :salestax %><br>
+    <%= f.text_field :salestax %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br>
+    <%= f.text_field :string %>
+  </div>
+  <div class="field">
+    <%= f.label :freightchkremit %><br>
+    <%= f.text_field :freightchkremit %>
+  </div>
+  <div class="field">
+    <%= f.label :msgcreditmemoref %><br>
+    <%= f.text_field :msgcreditmemoref %>
+  </div>
+  <div class="field">
+    <%= f.label :linecost %><br>
+    <%= f.text_field :linecost %>
+  </div>
+  <div class="field">
+    <%= f.label :cm %><br>
+    <%= f.text_field :cm %>
+  </div>
+  <div class="field">
+    <%= f.label :busunit %><br>
+    <%= f.text_field :busunit %>
+  </div>
+  <div class="field">
+    <%= f.label :store %><br>
+    <%= f.text_field :store %>
+  </div>
+  <div class="field">
+    <%= f.label :acct %><br>
+    <%= f.text_field :acct %>
+  </div>
+  <div class="field">
+    <%= f.label :costcntr %><br>
+    <%= f.text_field :costcntr %>
+  </div>
+  <div class="field">
+    <%= f.label :productcode %><br>
+    <%= f.text_field :productcode %>
+  </div>
+  <div class="field">
+    <%= f.label :activitycode %><br>
+    <%= f.text_field :activitycode %>
+  </div>
+  <div class="field">
+    <%= f.label :gldesc %><br>
+    <%= f.text_field :gldesc %>
+  </div>
+  <div class="field">
+    <%= f.label :usetax %><br>
+    <%= f.text_field :usetax %>
+  </div>
+  <div class="field">
+    <%= f.label :fuelcharge %><br>
+    <%= f.text_field :fuelcharge %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

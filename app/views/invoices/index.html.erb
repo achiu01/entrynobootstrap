@@ -1,0 +1,73 @@
+<h1>Listing invoices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Period</th>
+      <th>Days</th>
+      <th>Suppliernumber</th>
+      <th>Suppliername</th>
+      <th>Suppliersite</th>
+      <th>Invoicenumber</th>
+      <th>Invoiceorcreditmemoamount</th>
+      <th>Invoicedate</th>
+      <th>Salestax</th>
+      <th>String</th>
+      <th>Freightchkremit</th>
+      <th>Msgcreditmemoref</th>
+      <th>Linecost</th>
+      <th>Cm</th>
+      <th>Busunit</th>
+      <th>Store</th>
+      <th>Acct</th>
+      <th>Costcntr</th>
+      <th>Productcode</th>
+      <th>Activitycode</th>
+      <th>Gldesc</th>
+      <th>Usetax</th>
+      <th>Fuelcharge</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invoices.each do |invoice| %>
+      <tr>
+        <td><%= invoice.period %></td>
+        <td><%= invoice.days %></td>
+        <td><%= invoice.suppliernumber %></td>
+        <td><%= invoice.suppliername %></td>
+        <td><%= invoice.suppliersite %></td>
+        <td><%= invoice.invoicenumber %></td>
+        <td><%= invoice.invoiceorcreditmemoamount %></td>
+        <td><%= invoice.invoicedate %></td>
+        <td><%= invoice.salestax %></td>
+        <td><%= invoice.string %></td>
+        <td><%= invoice.freightchkremit %></td>
+        <td><%= invoice.msgcreditmemoref %></td>
+        <td><%= invoice.linecost %></td>
+        <td><%= invoice.cm %></td>
+        <td><%= invoice.busunit %></td>
+        <td><%= invoice.store %></td>
+        <td><%= invoice.acct %></td>
+        <td><%= invoice.costcntr %></td>
+        <td><%= invoice.productcode %></td>
+        <td><%= invoice.activitycode %></td>
+        <td><%= invoice.gldesc %></td>
+        <td><%= invoice.usetax %></td>
+        <td><%= invoice.fuelcharge %></td>
+        <td><%= invoice.status %></td>
+        <td><%= link_to 'Show', invoice %></td>
+        <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
+        <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Invoice', new_invoice_path %>
